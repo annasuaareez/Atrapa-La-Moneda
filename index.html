@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atrapa la moneda</title>
+    <link rel="shortcut icon" type="image/x-icon" href="imagenes/ico-moneda.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="izq">
+            <div class="controles">
+                <img src="imagenes/awsd.png" class="awsd" alt="">
+                <img src="imagenes/flechas.png" class="flechas" alt="">
+            </div>
+            <div id="puntuacion">
+                <p>Puntuacion</p>
+                <div class="puntuacion-jugador">Jugador <img src="imagenes/yoshi.png" alt=""> Yoshi: <span id="jugador1">0</span></span></div>
+                <div class="puntuacion-jugador">Jugador <img src="imagenes/browse.png" alt=""> Browser: <span id="jugador2">0</span></span></div>
+            </div>
+        </div>
+        <div class="juego">
+            <div id="tablero"></div>
+            <div id="mensaje"></div>
+            <button type="reset" id="boton">Juega de nuevo</button>
+        </div>
+        <!--
+            <div class="tiempo">
+            <p>Tiempo</p>
+            <div id="count-down">
+                <div class="circulo">
+                    <div id="segundos"></div>
+                </div>             
+            </div>
+        </div> 
+        -->       
+    </main>
+</body>
+<script src="app.js"></script>
+</html>
