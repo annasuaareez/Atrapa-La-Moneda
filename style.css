@@ -1,56 +1,28 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: "Pixel", sans-serif;
 }
+
 @font-face {
     font-family: 'Pixel';
     src: url('fuente/Pixeltype.ttf');
 }
-body{
+
+body {
     background-image: url(imagenes/wallpaperflare.com_wallpaper.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-main{
+
+main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-} 
-@media screen and (max-width:790px) {
-    main{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    } 
-    .flechas{
-        height: 75px;
-    }
-    .awsd{
-        height: 75px;
-    }
-    .container{
-        width: 400px;
-        height: 400px;
-        border: 1px solid black;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .card{
-        width: 40px;
-        height: 40px;
-        border: 1px solid black;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 20px;
-        font-weight: bold;
-    }
 }
 
 /*PARTE DE LA IZQUIERDA*/
-.izq{
+.izq {
     display: flex;
     flex-direction: column;
     margin-top: 55px;
@@ -58,47 +30,54 @@ main{
 }
 
 /*CONTROLES*/
-.controles{
+.controles {
     display: flex;
     flex-direction: row;
 }
-.flechas{
+
+.flechas {
     height: 130px;
 }
-.awsd{
+
+.awsd {
     height: 130px;
 }
 
 /*PUNTUACION*/
-#puntuacion{
+#puntuacion {
     display: block;
     flex-direction: column;
     justify-content: left;
 }
-#puntuacion p{
+
+#puntuacion p {
     font-size: 80px;
 }
-.puntuacion-jugador{
+
+.puntuacion-jugador {
     font-size: 45px;
     font-weight: bold;
     margin-bottom: 25px;
 }
-.puntuacion-jugador img{
+
+.puntuacion-jugador img {
     width: 40px;
 }
 
 /*TABLERO*/
-#tablero{
+#tablero {
     margin-top: 50px;
 }
-.container{
+
+.container {
     width: 500px;
     height: 500px;
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
 }
-.card{
+
+.card {
     background-color: #268e009b !important;
     width: 50px;
     height: 50px;
@@ -110,20 +89,24 @@ main{
     font-size: 20px;
     font-weight: bold;
 }
-.objetivo{
+
+.objetivo {
     background-image: url(imagenes/moneda.gif);
     background-size: cover;
 }
-.posicionJugado1{
+
+.posicionJugado1 {
     background-image: url(imagenes/yoshi.gif);
     background-size: cover;
 }
-.posicionJugado2{
+
+.posicionJugado2 {
     background-image: url(imagenes/browse.gif);
     background-size: cover;
 }
+
 /*CENTRO*/
-.juego{
+.juego {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,55 +126,161 @@ main{
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     position: relative;
     font-weight: bold;
-  }
-  #boton:active {
+}
+
+#boton:active {
     box-shadow: 0px 0px 0px 0px;
     top: 5px;
     left: 5px;
-  }
-  @media (min-width: 768px) {
-    #boton {
-      padding: 0.25em 0.75em;
-    }
-  }
-
+}
 
 /*MENSAJE DE GANADOR*/
-#mensaje{
+#mensaje {
     margin-top: 18px;
-    font-size: 37px; 
+    font-size: 37px;
     font-weight: bold;
 }
 
-/*TIEMPO
-.tiempo{
-    display: block;
-    flex-direction: column;
-    margin-top: 45px;
-    font-family: "Formula", sans-serif;
+
+@media only screen and (max-width: 600px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body {
+        background-image: url(imagenes/wallpaperflare.com_wallpaper.jpg);
+        background-repeat: no-repeat;
+        background-size: initial;
+    }
+
+    #puntuacion {
+        display: block;
+        flex-direction: column;
+        justify-content: left;
+    }
+    
+    #puntuacion p {
+        margin-top: 4%;
+        margin-bottom: 6%;
+        font-size: 55px;
+    }
+    
+    .puntuacion-jugador {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+    
+    .puntuacion-jugador img {
+        width: 40px;
+    }
+
+    .flechas {
+        height: 75px;
+    }
+
+    .awsd {
+        height: 75px;
+    }
+
+    .container {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #boton {
+        padding: 0.25em 0.75em;
+    }
+
+    #mensaje {
+        margin-top: 18px;
+        font-size: 20px;
+        font-weight: bold;
+    }
 }
-#count-down{
-    position: relative;
-    margin: auto;
-    margin-top: 25px;
-    height: 60px;
-    width: 60px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body {
+        background-image: url(imagenes/wallpaperflare.com_wallpaper.jpg);
+        background-repeat: no-repeat;
+        background-size: initial;
+    }
+
+    #puntuacion {
+        display: block;
+        flex-direction: column;
+        justify-content: left;
+    }
+    
+    #puntuacion p {
+        margin-top: 4%;
+        margin-bottom: 6%;
+        font-size: 80px;
+    }
+    
+    .puntuacion-jugador {
+        font-size: 45px;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+    
+    .puntuacion-jugador img {
+        width: 40px;
+    }
+
+    .flechas {
+        height: 105px;
+    }
+
+    .awsd {
+        height: 105px;
+    }
+
+    .container {
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #boton {
+        padding: 0.25em 0.75em;
+    }
 }
-.circulo {
-    width: 70px;
-    height: 70px;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    border:3px solid #a58e74;
-}
-#segundos{
-    color: black;
-    display: inline-block;
-    font-size: 25px;
-    margin-top: 17PX;
-}
-*/
